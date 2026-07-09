@@ -6,8 +6,8 @@ NVCC = nvcc
 # -std=c++14 sets the C++ standard
 NVCC_FLAGS = -O3 -std=c++14
 
-# Libraries to link (NVIDIA Performance Primitives for image processing)
-LIBS = -lnppig -lnppc -lnppi
+# Libraries to link (NVIDIA NPP and OpenCV)
+LIBS = -lnppig -lnppc -lnppi -lopencv_core -lopencv_imgcodecs
 
 # Target executable name
 TARGET = defect_inspector

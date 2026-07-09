@@ -1,0 +1,42 @@
+coder@695bf0ccac4f:~/project/CUDA-at-Scale-Independent-Project$ ./run.sh
+==================================================
+Compiling the Industrial Inspection Application...
+==================================================
+rm -f defect_inspector
+nvcc -O3 -std=c++14 -I/usr/include/opencv4 main.cu -o defect_inspector -lopencv_core -lopencv_imgcodecs
+/usr/include/opencv4/opencv2/stitching/detail/warpers.hpp(213): warning: overloaded virtual function "cv::detail::PlaneWarper::buildMaps" is only partially overridden in class "cv::detail::AffineWarper"
+
+/usr/include/opencv4/opencv2/stitching/detail/warpers.hpp(213): warning: overloaded virtual function "cv::detail::PlaneWarper::warp" is only partially overridden in class "cv::detail::AffineWarper"
+
+/usr/include/opencv4/opencv2/stitching/detail/blenders.hpp(100): warning: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::FeatherBlender"
+
+/usr/include/opencv4/opencv2/stitching/detail/blenders.hpp(127): warning: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::MultiBandBlender"
+
+/usr/include/opencv4/opencv2/videostab/motion_stabilizing.hpp(106): warning: function "cv::videostab::IMotionStabilizer::stabilize(int, const std::vector<cv::Mat, std::allocator<cv::Mat>> &, std::pair<int, int>, cv::Mat *)" is hidden by "cv::videostab::GaussianMotionFilter::stabilize" -- virtual function override intended?
+
+/usr/include/opencv4/opencv2/stitching/detail/warpers.hpp(213): warning: overloaded virtual function "cv::detail::PlaneWarper::buildMaps" is only partially overridden in class "cv::detail::AffineWarper"
+
+/usr/include/opencv4/opencv2/stitching/detail/warpers.hpp(213): warning: overloaded virtual function "cv::detail::PlaneWarper::warp" is only partially overridden in class "cv::detail::AffineWarper"
+
+/usr/include/opencv4/opencv2/stitching/detail/blenders.hpp(100): warning: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::FeatherBlender"
+
+/usr/include/opencv4/opencv2/stitching/detail/blenders.hpp(127): warning: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::MultiBandBlender"
+
+/usr/include/opencv4/opencv2/videostab/motion_stabilizing.hpp(106): warning: function "cv::videostab::IMotionStabilizer::stabilize(int, const std::vector<cv::Mat, std::allocator<cv::Mat>> &, std::pair<int, int>, cv::Mat *)" is hidden by "cv::videostab::GaussianMotionFilter::stabilize" -- virtual function override intended?
+
+
+==================================================
+Running Batch Industrial Inspection...
+==================================================
+Starting Industrial Inspection Pipeline...
+--------------------------------------------------
+Inspection Complete!
+Total Images Processed: 64
+Total GPU Processing Time: 662.104 ms
+Average Time per Image: 10.3454 ms
+--------------------------------------------------
+
+==================================================
+Execution Verification Complete.
+==================================================
+coder@695bf0ccac4f:~/project/CUDA-at-Scale-Independent-Project$ 

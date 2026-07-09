@@ -4,10 +4,11 @@ NVCC = nvcc
 # Compiler flags
 # -O3 optimizes the code for speed
 # -std=c++14 sets the C++ standard
-NVCC_FLAGS = -O3 -std=c++14
+# -I tells the compiler where to find the OpenCV headers
+NVCC_FLAGS = -O3 -std=c++14 -I/usr/include/opencv4
 
-# Libraries to link (NVIDIA NPP and OpenCV)
-LIBS = -lnppig -lnppc -lnppi -lopencv_core -lopencv_imgcodecs
+# Libraries to link (Only OpenCV is needed now!)
+LIBS = -lopencv_core -lopencv_imgcodecs
 
 # Target executable name
 TARGET = defect_inspector
